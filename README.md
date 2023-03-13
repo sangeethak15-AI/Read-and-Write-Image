@@ -19,34 +19,40 @@ Use imwrite(filename, image) to write the image.
 ### Step5:
 End the program and close the output image windows.
 ## Program:
-### Developed By:
-### Register Number: 
+### Developed By:Sangeetha.K
+### Register Number: 212221230085
 i) #To Read,display the image
 ```
-  
+import cv2
+clr_img=cv2.imread('cat1.jpg',1)
+cv2.imshow('catty',clr_img)
+cv2.waitKey(0) 
 
 ```
 ii) #To write the image
 ```
-
-
+cv2.imwrite('created.jpg',clr_img)
 
 ```
 iii) #Find the shape of the Image
-```python3
-
-
+```
+print(clr_img.shape)
 
 ```
 iv) #To access rows and columns
 
-```python3
-
-
+```
+import random
+for i in range (100):
+    for j in range(clr_img.shape[1]):
+        clr_img[i][j] = [random.randint(0,255),random.randint(0,255),random.randint(0,255)]  
+cv2.imshow('Part image',clr_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 ```
 v) #To cut and paste portion of image
-```python3
+```
 
 
 
