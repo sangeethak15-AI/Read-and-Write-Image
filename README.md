@@ -27,17 +27,14 @@ import cv2
 clr_img=cv2.imread('cat1.jpg',1)
 cv2.imshow('catty',clr_img)
 cv2.waitKey(0) 
-
 ```
 ii) #To write the image
 ```
 cv2.imwrite('created.jpg',clr_img)
-
 ```
 iii) #Find the shape of the Image
 ```
 print(clr_img.shape)
-
 ```
 iv) #To access rows and columns
 
@@ -49,13 +46,14 @@ for i in range (100):
 cv2.imshow('Part image',clr_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
 ```
 v) #To cut and paste portion of image
 ```
-
-
-
+tag = clr_img[300:400,300:400]
+clr_img[50:150,50:150] = tag
+cv2.imshow('part of image',clr_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 ```
 
 ## Output:
